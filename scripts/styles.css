@@ -1,19 +1,27 @@
 .navBardemoBasicUsage md-content .ext-content {
     padding: 50px;
     margin: 20px;
-    background-color: 8D5103;
 }
 
 body {
-    background-color: F0A800;
+    background-color: #f4f4f4;
 }
 
 #cardColor {
-    background-color: FFD600;
+    background-color: #dcd0c0;
 }
 
 .text {
     text-align: center;
+    color: #c0b283;
+}
+
+#navText {
+    color: #c0b283;
+}
+
+#beerName {
+    color: #373737;
 }
 
 #text {

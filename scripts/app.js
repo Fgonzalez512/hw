@@ -3,13 +3,18 @@ angular
     .controller('DemoCtrl', function($scope, $http, $resource, $mdDialog) {
 
         $scope.view = [];
+
         // $scope.test = "booyah" booyah test to ensure angular info is passing through
 
+
+        // Begin AJAX call
         $http.get('https://api.punkapi.com/v2/beers').then(res => {
             // console.log(res.data);
             $scope.view = res.data;
         });
+        // End AJAX call
 
+        // Begin Dialog requirements
         $scope.showDialog = function(e, item) {
             $mdDialog.show({
                 locals: {
@@ -31,7 +36,7 @@ angular
                 $mdDialog.hide();
             };
         }
-
+        // End Dialog requirements
 
     })
     .config(function($mdThemingProvider) {
