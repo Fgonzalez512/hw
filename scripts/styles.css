@@ -1,0 +1,41 @@
+.navBardemoBasicUsage md-content .ext-content {
+    padding: 50px;
+    margin: 20px;
+    background-color: 8D5103;
+}
+
+body {
+    background-color: F0A800;
+}
+
+#cardColor {
+    background-color: FFD600;
+}
+
+.text {
+    text-align: center;
+}
+
+#text {
+    text-align: center;
+}
+
+.unit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.view-image {
+    height: 100%;
+    width: auto;
+}
+
+.card-media {
+    display: flex;
+    justify-content: center;
+}
+
+.interior-dialog {
+    padding: 1em;
+}

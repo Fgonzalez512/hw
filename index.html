@@ -16,16 +16,63 @@
 
 		<link rel="stylesheet" href="scripts/styles.css">
 		<script type="text/javascript" src="scripts/app.js"></script>
+		<title>BeerSort</title>
 	</head>
 
 	<body>
+		<!-- Begin Div -->
 		<div ng-controller="DemoCtrl">
 
+			<!-- Begin NavBar -->
 
-			<!-- Code Here -->
+			<div ng-cloak class='navbarColor'>
+				<md-content class="md-padding">
+					<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+						<md-nav-item md-nav-click="goto('home')" name="home">
+							Home
+						</md-nav-item>
+						<md-nav-item md-nav-click="goto('page2')" name="about">
+							About
+						</md-nav-item>
+						<md-nav-item md-nav-click="goto('page3')" name="contact">
+							Contact
+						</md-nav-item>
+					</md-nav-bar>
+				</md-content>
+			</div>
+
+			<!-- End NavBar -->
+
+			<h1 class='text'>Frank's Beer Catalog</h1>
+
+			<!-- Begin Cards -->
+			<md-grid-list md-cols="3" md-cols-xs="1" md-cols-sm="2" md-gutter="2em" md-row-height="4:3">
+				<md-grid-tile ng-repeat="item in view" class="tiles">
+					<md-card flex class="card" id="cardColor">
+						<md-card-title>
+							<md-card-title-text class="unit">
+								<span class="md-headline">{{item.name}}</span>
+								<span class="md-subhead">ABV: {{item.abv}}</span>
+								<em><strong><p>{{item.tagline}}</p></strong></em>
+							</md-card-title-text>
+							<md-card-title-media>
+								<div class="md-media-lg card-media">
+									<img ng-src="{{item.image_url}}" class="view-image" />
+								</div>
+							</md-card-title-media>
+						</md-card-title>
+						<md-card-actions layout="row" layout-align="end center">
+							<md-button class="md-primary" ng-click="showDialog($event, item)">Description</md-button>
+						</md-card-actions>
+					</md-card>
+				</md-grid-tile>
+			</md-grid-list>
+			<!-- End Cards -->
 
 
+
+			<!-- end div -->
 		</div>
 	</body>
-	
+
 </html>
